@@ -37,12 +37,12 @@
                              Foreground="White"
                              FontSize="14"
                              Style="{StaticResource MenuButtonTheme}"/>
-                <RadioButton Content="Placeholder"
+                <RadioButton Content="Placeholder 2"
                              Height="50"
                              Foreground="White"
                              FontSize="14"
                              Style="{StaticResource MenuButtonTheme}"/>
-                <RadioButton Content="Placeholder"
+                <RadioButton Content="Placeholder 3"
                              Height="50"
                              Foreground="White"
                              FontSize="14"
