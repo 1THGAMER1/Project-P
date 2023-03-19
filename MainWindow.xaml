@@ -9,12 +9,14 @@
         ResizeMode="CanMinimize"
         Height="720" Width="1080"
         Title="MainWindow"
-        WindowStyle="SingleBorderWindow">
+        WindowStyle="SingleBorderWindow"
+        Icon="Images/Bitmap.bmp">
+    
 
     <Border Background="#181818">
         <Grid Cursor="Arrow">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="0.45*"/>
+                <ColumnDefinition Width="0.55*"/>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
@@ -50,7 +52,7 @@
 
             </StackPanel>
 
-            <TextBox Width="300"
+            <TextBox Width="400"
                      Height="50"
                      VerticalContentAlignment="Center"
                      HorizontalAlignment="Left"
