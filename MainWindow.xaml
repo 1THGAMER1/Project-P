@@ -4,20 +4,22 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
-        Height="600" Width="900"
-        WindowStyle="None"
         Background="Transparent"
-        AllowsTransparency="True">
+        WindowState="Normal"
+        ResizeMode="CanResize"
+        Height="768" Width="1024"
+        MinHeight="500" MinWidth="802"
+        Title="MainWindow"
+        WindowStyle="ThreeDBorderWindow">
 
-    <Border Background="#181818"
-            CornerRadius="20">
-        <Grid>
+    <Border Background="#181818">
+        <Grid Cursor="Arrow">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="300"/>
+                <ColumnDefinition Width="0.55*"/>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
-                <RowDefinition Height="75"/>
+                <RowDefinition Height="0.15*"/>
                 <RowDefinition/>
             </Grid.RowDefinitions>
 
@@ -25,7 +27,7 @@
                     VerticalAlignment="Center"
                     HorizontalAlignment="Left"
                     Foreground="White"
-                    FontSize="22" 
+                    FontSize="20" 
                     Margin="20,0,0,0"
                     FontFamily="Arial Black"/>
 
@@ -49,14 +51,14 @@
 
             </StackPanel>
 
-            <TextBox Width="250"
-                     Height="40"
+            <TextBox Width="200"
+                     Height="50"
                      VerticalContentAlignment="Center"
                      HorizontalAlignment="Left"
-                     Margin="5"
+                     Margin="3,0,0,0"
                      Grid.Column="1"
-                     Style="{StaticResource ModernTextbox}"></TextBox>
-            
+                     Style="{StaticResource ModernTextbox}"/>
+
         </Grid>
     </Border>
 </Window>
