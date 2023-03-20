@@ -1,6 +1,8 @@
 ﻿<Application x:Class="Project_P.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:ViewModel="clr-namespace:Project_P.MVVM.ViewModel"
+             xmlns:view="clr-namespace:Project_P.MVVM.View"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
         <ResourceDictionary>
@@ -8,6 +10,12 @@
                 <ResourceDictionary Source="theme\menubuttonthemes.xaml"/>
                 <ResourceDictionary Source="theme\TextboxTheme.xaml"/>
             </ResourceDictionary.MergedDictionaries>
+
+            <DataTemplate DataType="{x:Type ViewModel:HomeViewModel}">
+                <view:HomeView/>
+
+            </DataTemplate>
+            
         </ResourceDictionary>
     </Application.Resources>
 </Application>
