@@ -6,8 +6,7 @@
         xmlns:ViewModel="clr-namespace:Project_P.MVVM.ViewModel"
         mc:Ignorable="d"
         Background="Transparent"
-        WindowState="Normal"
-        ResizeMode="CanMinimize"
+        AllowsTransparency="True"
         Height="720" Width="1080"
         Title="MainWindow"
         WindowStyle="None"
@@ -21,37 +20,39 @@
     <Border Background="#181818">
         <Grid Cursor="Arrow">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="89*"/>
-                <ColumnDefinition Width="271*"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
-                <RowDefinition Height="0.18*"/>
-                <RowDefinition/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
 
-            <TextBlock Text="Krasse Passwordapp"
+            <TextBlock Text="Project-P"
+                       TextAlignment="Center"
                     VerticalAlignment="Center"
                     HorizontalAlignment="Center"
                     Foreground="White"
-                    FontSize="20"
-                    FontFamily="Arial Black" Height="23" Width="230"/>
+                    FontSize="22"
+                    FontFamily="Arial Black" Height="23" Width="200"
+                       Margin="10"/>
 
             <StackPanel Grid.Row="1">
 
-                <RadioButton Content="Placeholder"
+                <RadioButton Content="View"
                              Height="50"
                              Foreground="White"
-                             FontSize="14"
+                             FontSize="16"
                              Style="{StaticResource MenuButtonTheme}"/>
-                <RadioButton Content="Placeholder 2"
+                <RadioButton Content="View 2"
                              Height="50"
                              Foreground="White"
-                             FontSize="14"
+                             FontSize="16"
                              Style="{StaticResource MenuButtonTheme}"/>
-                <RadioButton Content="Placeholder 3"
+                <RadioButton Content="View 3"
                              Height="50"
                              Foreground="White"
-                             FontSize="14"
+                             FontSize="16"
                              Style="{StaticResource MenuButtonTheme}"/>
 
             </StackPanel>
@@ -65,7 +66,7 @@
 
             <ContentControl Grid.Row="1"
                             Grid.Column="1"
-                            Margin="10,10,10,10"
+                            Margin="5,10,10,10"
                             Content="{Binding CurrentView}"/>
 
         </Grid>
