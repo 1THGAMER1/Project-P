@@ -8,7 +8,6 @@
                     <Border CornerRadius="10"
                             Background="#353340"
                             Width="600" Height="50">
-
                         <Grid>
                             <Rectangle StrokeThickness="1"/>
                             <TextBox Margin="1"
@@ -19,7 +18,6 @@
                                      Padding="5"
                                      Foreground="#CFCFCF"
                                      x:Name="SearchBox"/>
-
                             <TextBlock IsHitTestVisible="False"
                                        Text="Suche Passwort"
                                        VerticalAlignment="Center"
@@ -28,7 +26,6 @@
                                        FontSize="11"
                                        Foreground="DarkGray"
                                        Grid.Column="1">
-
                                 <TextBlock.Style>
                                     <Style TargetType="{x:Type TextBlock}">
                                         <Style.Triggers>
