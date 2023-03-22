@@ -18,10 +18,11 @@
     </Window.DataContext>
 
     <Border Background="#181818">
+        
         <Grid Cursor="Arrow">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="Auto"/>
-                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="905"/>
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
@@ -34,8 +35,39 @@
                     HorizontalAlignment="Center"
                     Foreground="White"
                     FontSize="22"
-                    FontFamily="Arial Black" Height="23" Width="200"
+                    FontFamily="Arial Black" Height="23" Width="150"
                        Margin="10"/>
+
+            <StackPanel Grid.Column="1" 
+                HorizontalAlignment="Right"
+                        VerticalAlignment="Top"
+                        Orientation="Horizontal">
+
+
+                <Button Width="30"
+                        Height="30"
+                        Content="−"
+                        BorderThickness="0"
+                        Background="Transparent"
+                        Foreground="Gray">
+                </Button>
+                <Button Width="30"
+                        Height="30"
+                        Content="▢"
+                        BorderThickness="0"
+                        Background="Transparent"
+                        Foreground="Gray">
+                </Button>
+                
+                <Button Width="30"
+                        Height="30"
+                        Content="⨉"
+                        BorderThickness="0"
+                        Background="Transparent"
+                        Foreground="Gray">
+                </Button>
+                
+            </StackPanel>
 
             <StackPanel Grid.Row="1">
 

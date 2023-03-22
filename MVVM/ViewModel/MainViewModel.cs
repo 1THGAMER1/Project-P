@@ -1,9 +1,6 @@
 ﻿using Project_P.Core;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Windows.Input;
+using System.Windows;
 
 namespace Project_P.MVVM.ViewModel
 {
@@ -42,6 +39,7 @@ namespace Project_P.MVVM.ViewModel
             {
                 CurrentView = View2VM;
             });
-        }       
+
+        }
     }
 }
