@@ -44,27 +44,16 @@
                         Orientation="Horizontal">
 
 
-                <Button Width="30"
-                        Height="30"
-                        Content="−"
-                        BorderThickness="0"
-                        Background="Transparent"
-                        Foreground="Gray">
-                </Button>
-                <Button Width="30"
-                        Height="30"
-                        Content="▢"
-                        BorderThickness="0"
-                        Background="Transparent"
-                        Foreground="Gray">
+                <Button x:Name="MinimizeButton"
+                        Style="{StaticResource MinimizeControlButton}">
                 </Button>
                 
-                <Button Width="30"
-                        Height="30"
-                        Content="⨉"
-                        BorderThickness="0"
-                        Background="Transparent"
-                        Foreground="Gray">
+                <Button x:Name="MaximizeButton"
+                        Style="{StaticResource MaximizeControlButton}">
+                </Button>
+
+                <Button x:Name="ExitButton"
+                        Style="{StaticResource ExitControlButton}">
                 </Button>
                 
             </StackPanel>

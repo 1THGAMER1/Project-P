@@ -24,5 +24,10 @@ namespace Project_P
         {
             InitializeComponent();
         }
+
+        private void MaximizeButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
