@@ -12,6 +12,11 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Runtime.InteropServices;
+using System.Windows.Interop;
+using System.Windows.Forms;
+using System.Drawing;
+
 
 namespace Project_P
 {
@@ -25,9 +30,17 @@ namespace Project_P
             InitializeComponent();
         }
 
-        private void MaximizeButton_Click(object sender, RoutedEventArgs e)
-        {
+        [DllImport("user32.dll")]
+        public static extern IntPtr SendMessage(IntPtr hWnd, int wMsg, int wParam, int lParam);
 
+        private void ControlBar_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            WindowInteropHelper helper = new WindowInteropHelper(this);
+            SendMessage(helper.Handle, 161, 2, 0);
+
+            IntPtr hWnd = helper.Handle;
+            var Screen = System.Windows.Forms.Screen.FromHandle(hWnd);
+            MaxHeight = Screen.WorkingArea.Height+10;
         }
     }
 }

@@ -22,9 +22,10 @@
         <Grid Cursor="Arrow">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="Auto"/>
-                <ColumnDefinition Width="905"/>
+                <ColumnDefinition Width="Auto"/>
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
@@ -35,30 +36,36 @@
                     HorizontalAlignment="Center"
                     Foreground="White"
                     FontSize="22"
+                    Grid.Row="1"
                     FontFamily="Arial Black" Height="23" Width="150"
                        Margin="10"/>
 
-            <StackPanel Grid.Column="1" 
-                HorizontalAlignment="Right"
-                        VerticalAlignment="Top"
-                        Orientation="Horizontal">
+
+            <StackPanel x:Name="ControlBar"
+                        Grid.Row="0"
+                        Grid.Column="1"
+                        FlowDirection="RightToLeft"
+                        Orientation="Horizontal"
+                        Background="Transparent"
+                        MouseLeftButtonDown="ControlBar_MouseLeftButtonDown">
 
 
-                <Button x:Name="MinimizeButton"
-                        Style="{StaticResource MinimizeControlButton}">
-                </Button>
-                
-                <Button x:Name="MaximizeButton"
-                        Style="{StaticResource MaximizeControlButton}">
-                </Button>
 
                 <Button x:Name="ExitButton"
                         Style="{StaticResource ExitControlButton}">
                 </Button>
-                
+
+                <Button x:Name="MaximizeButton"
+                        Style="{StaticResource MaximizeControlButton}">
+                </Button>
+
+                <Button x:Name="MinimizeButton"
+                        Style="{StaticResource MinimizeControlButton}">
+                </Button>
+
             </StackPanel>
 
-            <StackPanel Grid.Row="1">
+            <StackPanel Grid.Row="2">
 
                 <RadioButton Content="View"
                              Height="50"
@@ -83,9 +90,10 @@
                      HorizontalAlignment="Left"
                      Margin="20,20,0,20"
                      Grid.Column="1"
+                     Grid.Row="1"
                      Style="{StaticResource ModernTextbox}"/>
 
-            <ContentControl Grid.Row="1"
+            <ContentControl Grid.Row="2"
                             Grid.Column="1"
                             Margin="5,10,10,10"
                             Content="{Binding CurrentView}"/>
