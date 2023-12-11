@@ -5,18 +5,40 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Project_P.MVVM.View"
              mc:Ignorable="d" 
-             d:DesignHeight="600" d:DesignWidth="900">
+             d:DesignHeight="800" d:DesignWidth="900"
+             HorizontalAlignment="Stretch"
+             VerticalAlignment="Stretch">
     <StackPanel>
+        <TextBlock Text="Willkommen!"
+                           TextAlignment="Center"
+                           Foreground="White"
+                           FontSize="30"
+                           FontFamily="Arial Black" Height="Auto" Width="Auto"
+                           Margin="20"/>
+        
+        <TextBox     Width="Auto"
+                     MinHeight="50"
+                     VerticalContentAlignment="Stretch"
+                     HorizontalAlignment="Stretch"
+                     Margin="20"
+                     Grid.Column="1"
+                     Grid.Row="2"
+                     Style="{StaticResource ModernTextbox}"/>
+
         <TextBlock Text="Entdecke Project P"
                        Foreground="White"
                        FontSize="28"
-                       HorizontalAlignment="Left"
+                       HorizontalAlignment="Stretch"
                        Margin="5,10,20,20"/>
 
-        <StackPanel Orientation="Horizontal">
-            <Border Width="380"
-                    Height="200"
-                    Margin="40,0,0,0">
+        <StackPanel Orientation="Horizontal"
+                    HorizontalAlignment="Stretch"
+                    VerticalAlignment="Stretch">
+            <Border MinWidth="380"
+                    MinHeight="200"
+                    Width="Auto"
+                    Height="Auto"
+                    Margin="40">
 
                 <Border.Background>
                     <LinearGradientBrush StartPoint="0, 0" EndPoint="1,2">
@@ -32,18 +54,6 @@
                 </Border.Clip>
 
                 <Grid>
-                    <Image
-                        Width="90"
-                        HorizontalAlignment="Right"
-                        Source="/Images/Schloss.png" RenderTransformOrigin="0.5,0.5" Margin="0,110,0,0">
-                        <Image.RenderTransform>
-                            <TransformGroup>
-                                <ScaleTransform/>
-                                <SkewTransform/>
-                                <TranslateTransform/>
-                            </TransformGroup>
-                        </Image.RenderTransform>
-                    </Image>
                     <StackPanel>
                         <TextBlock Text="Wir sichern Ihre Passwörter!"
                                    Foreground="White"
@@ -53,10 +63,15 @@
                     </StackPanel>
                 </Grid>
             </Border>
-            <Border Width="380"
-                    Height="200"
+            <Border 
+                    MinHeight="200"
+                    MinWidth="380"
+                    Width="Auto"
+                    Height="Auto"
                     CornerRadius="10"
-                    Margin="40, 0, 40, 0">
+                    Margin="40"
+                    VerticalAlignment="Stretch"
+                    HorizontalAlignment="Stretch">
 
                 <Border.Background>
                     <LinearGradientBrush StartPoint="0, 0" EndPoint="1,2">
@@ -73,7 +88,6 @@
                                Padding="50"
                                FontFamily="Segoe UI Variable Text Semibold"/>
                 </StackPanel>
-
             </Border>
         </StackPanel>
 
@@ -134,7 +148,6 @@
                 <Border Width="150"
                         Height="120"
                         CornerRadius="12">
-
                     <Border.Background>
                         <LinearGradientBrush StartPoint="0, 0" EndPoint="1,2">
                             <GradientStop Color="BlueViolet" Offset="0.0"/>
@@ -154,7 +167,6 @@
                 <Border Width="150"
                         Height="120"
                         CornerRadius="12">
-
                     <Border.Background>
                         <LinearGradientBrush StartPoint="0, 0" EndPoint="1,2">
                             <GradientStop Color="BlueViolet" Offset="0.0"/>
@@ -189,14 +201,8 @@
                                    Padding="50"
                                    FontFamily="Segoe UI Variable Text Semibold" RenderTransformOrigin="0.536,0.466"/>
                     </StackPanel>
-
                 </Border>
-
-
             </StackPanel>
-
-
         </StackPanel>
-
     </StackPanel>
 </UserControl>

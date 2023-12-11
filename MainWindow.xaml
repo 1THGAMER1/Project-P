@@ -7,39 +7,28 @@
         mc:Ignorable="d"
         Background="Transparent"
         AllowsTransparency="True"
-        Height="720" Width="1080"
+        Height="Auto" Width="Auto"
         Title="MainWindow"
         WindowStyle="None"
         Icon="Images/Bitmap.bmp">
-
 
     <Window.DataContext>
         <ViewModel:MainViewModel/>
     </Window.DataContext>
 
     <Border Background="#181818">
-        
-        <Grid Cursor="Arrow">
+
+        <Grid Cursor="Arrow" Margin="-10,0,10,0">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="Auto"/>
-                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition/>
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
+
+
             </Grid.RowDefinitions>
-
-            <TextBlock Text="Project-P"
-                       TextAlignment="Center"
-                    VerticalAlignment="Center"
-                    HorizontalAlignment="Center"
-                    Foreground="White"
-                    FontSize="22"
-                    Grid.Row="1"
-                    FontFamily="Arial Black" Height="23" Width="150"
-                       Margin="10"/>
-
 
             <StackPanel x:Name="ControlBar"
                         Grid.Row="0"
@@ -47,9 +36,9 @@
                         FlowDirection="RightToLeft"
                         Orientation="Horizontal"
                         Background="Transparent"
+                        HorizontalAlignment="Stretch"
+                        VerticalAlignment="Stretch"
                         MouseLeftButtonDown="ControlBar_MouseLeftButtonDown">
-
-
 
                 <Button x:Name="ExitButton"
                         Style="{StaticResource ExitControlButton}">
@@ -62,40 +51,39 @@
                 <Button x:Name="MinimizeButton"
                         Style="{StaticResource MinimizeControlButton}">
                 </Button>
-
             </StackPanel>
-
-            <StackPanel Grid.Row="2">
+            <StackPanel Grid.Row="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+                <TextBlock Text="Projetct-P"
+                            TextAlignment="Center"
+                           Foreground="White"
+                           FontSize="22"
+                           FontFamily="Arial Black" Height="23" Width="150"
+                           Margin="20"
+                           />
 
                 <RadioButton Content="View"
-                             Height="50"
+                             Height="Auto"
                              Foreground="White"
                              FontSize="16"
                              Style="{StaticResource MenuButtonTheme}"/>
                 <RadioButton Content="View 2"
-                             Height="50"
+                             Height="Auto"
                              Foreground="White"
                              FontSize="16"
                              Style="{StaticResource MenuButtonTheme}"/>
                 <RadioButton Content="View 3"
-                             Height="50"
+                             Height="Auto"
                              Foreground="White"
                              FontSize="16"
                              Style="{StaticResource MenuButtonTheme}"/>
-
             </StackPanel>
-
-            <TextBox Width="600"
-                     VerticalContentAlignment="Center"
-                     HorizontalAlignment="Left"
-                     Margin="20,20,0,20"
-                     Grid.Column="1"
-                     Grid.Row="1"
-                     Style="{StaticResource ModernTextbox}"/>
-
-            <ContentControl Grid.Row="2"
+            <ContentControl Grid.Row="1"
                             Grid.Column="1"
                             Margin="5,10,10,10"
+                            FlowDirection="LeftToRight"
+                            VerticalContentAlignment="Center"
+                            VerticalAlignment="Stretch"
+                            HorizontalAlignment="Stretch"
                             Content="{Binding CurrentView}"/>
 
         </Grid>

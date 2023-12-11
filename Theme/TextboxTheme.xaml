@@ -7,7 +7,8 @@
                 <ControlTemplate TargetType="{x:Type TextBox}">
                     <Border CornerRadius="10"
                             Background="#353340"
-                            Width="600" Height="50">
+                            Width="Auto" Height="Auto"
+                            Margin="50 ,0 ,50 ,0">
                         <Grid>
                             <Rectangle StrokeThickness="1"/>
                             <TextBox Margin="1"
@@ -15,15 +16,15 @@
                                      BorderThickness="0"
                                      Background="Transparent"
                                      VerticalContentAlignment="Center"
-                                     Padding="5"
+                                     Padding="13"
                                      Foreground="#CFCFCF"
                                      x:Name="SearchBox"/>
                             <TextBlock IsHitTestVisible="False"
                                        Text="Suche Passwort"
                                        VerticalAlignment="Center"
-                                       HorizontalAlignment="Left"
-                                       Margin="10, 0, 0, 0"
-                                       FontSize="11"
+                                       HorizontalAlignment="Stretch"
+                                       Margin="15,0, 0, 0"
+                                       FontSize="15"
                                        Foreground="DarkGray"
                                        Grid.Column="1">
                                 <TextBlock.Style>
@@ -37,13 +38,9 @@
                                         </Setter>
                                     </Style>
                                 </TextBlock.Style>
-                                
                             </TextBlock>
-                             
                         </Grid>
-                        
                     </Border>
-                    
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
