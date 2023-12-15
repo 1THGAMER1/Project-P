@@ -40,5 +40,24 @@ namespace Project_P
             var Screen = System.Windows.Forms.Screen.FromHandle(hWnd);
             MaxHeight = Screen.WorkingArea.Height+10;
         }
+
+        private void ExitButton_Click(object sender, RoutedEventArgs e)
+        {
+            System.Windows.Application.Current.Shutdown();
+        }
+
+        private void MaximizeButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (this.WindowState == WindowState.Normal)
+            {
+                this.WindowState = WindowState.Maximized;
+            }
+            else this.WindowState = WindowState.Normal;
+        }
+
+        private void MinimizeButton_Click(Object sender, RoutedEventArgs e)
+        {
+            this.WindowState = WindowState.Minimized;
+        }
     }
 }

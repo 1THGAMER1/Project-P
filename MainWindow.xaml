@@ -41,15 +41,19 @@
                         MouseLeftButtonDown="ControlBar_MouseLeftButtonDown">
 
                 <Button x:Name="ExitButton"
-                        Style="{StaticResource ExitControlButton}">
+                        Style="{StaticResource ExitControlButton}"
+                        Click="ExitButton_Click">
                 </Button>
 
                 <Button x:Name="MaximizeButton"
-                        Style="{StaticResource MaximizeControlButton}">
+                        Style="{StaticResource MaximizeControlButton}"
+                        Click="MaximizeButton_Click">
+                        
                 </Button>
 
                 <Button x:Name="MinimizeButton"
-                        Style="{StaticResource MinimizeControlButton}">
+                        Style="{StaticResource MinimizeControlButton}"
+                        Click="MinimizeButton_Click">
                 </Button>
             </StackPanel>
             <StackPanel Grid.Row="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
@@ -61,18 +65,21 @@
                            Margin="20"
                            />
 
-                <RadioButton Content="View"
-                             Height="Auto"
+                <RadioButton Content="Home"
                              Foreground="White"
                              FontSize="16"
-                             Style="{StaticResource MenuButtonTheme}"/>
-                <RadioButton Content="View 2"
-                             Height="Auto"
+                             Style="{StaticResource MenuButtonTheme}"
+                             IsChecked="True"
+                             Command="{Binding HomeViewCommand}"/>
+
+                <RadioButton Content="SecondView"
                              Foreground="White"
                              FontSize="16"
-                             Style="{StaticResource MenuButtonTheme}"/>
-                <RadioButton Content="View 3"
-                             Height="Auto"
+                             Style="{StaticResource MenuButtonTheme}"
+                             Command="{Binding View2Command}"/>
+
+
+                <RadioButton Content="ThirdView"
                              Foreground="White"
                              FontSize="16"
                              Style="{StaticResource MenuButtonTheme}"/>
