@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Background="Transparent"
         AllowsTransparency="True"
-        Height="Auto" Width="Auto"
+        Height="950" Width="1200"
         Title="MainWindow"
         WindowStyle="None"
         Icon="Images/Bitmap.bmp">
@@ -48,13 +48,15 @@
                 <Button x:Name="MaximizeButton"
                         Style="{StaticResource MaximizeControlButton}"
                         Click="MaximizeButton_Click">
-                        
+
                 </Button>
 
                 <Button x:Name="MinimizeButton"
                         Style="{StaticResource MinimizeControlButton}"
                         Click="MinimizeButton_Click">
                 </Button>
+
+
             </StackPanel>
             <StackPanel Grid.Row="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
                 <TextBlock Text="Projetct-P"
@@ -92,7 +94,6 @@
                             VerticalAlignment="Stretch"
                             HorizontalAlignment="Stretch"
                             Content="{Binding CurrentView}"/>
-
         </Grid>
     </Border>
 </Window>

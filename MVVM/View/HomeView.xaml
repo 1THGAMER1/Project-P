@@ -5,40 +5,33 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Project_P.MVVM.View"
              mc:Ignorable="d" 
-             d:DesignHeight="800" d:DesignWidth="900"
+             d:DesignHeight="850" d:DesignWidth="800"
              HorizontalAlignment="Stretch"
              VerticalAlignment="Stretch">
     <StackPanel>
+       
         <TextBlock Text="Willkommen!"
                            TextAlignment="Center"
+                           VerticalAlignment="Center"
                            Foreground="White"
-                           FontSize="30"
+                           FontSize="28"
                            FontFamily="Arial Black" Height="Auto" Width="Auto"
                            Margin="20"/>
         
         <TextBox     Width="Auto"
                      MinHeight="50"
-                     VerticalContentAlignment="Stretch"
-                     HorizontalAlignment="Stretch"
                      Margin="20"
                      Grid.Column="1"
                      Grid.Row="2"
                      Style="{StaticResource ModernTextbox}"/>
 
-        <TextBlock Text="Entdecke Project P"
-                       Foreground="White"
-                       FontSize="28"
-                       HorizontalAlignment="Stretch"
-                       Margin="5,10,20,20"/>
-
-        <StackPanel Orientation="Horizontal"
-                    HorizontalAlignment="Stretch"
-                    VerticalAlignment="Stretch">
-            <Border MinWidth="380"
-                    MinHeight="200"
+        <StackPanel Orientation="Vertical">
+            <Border MinWidth="300"
+                    MinHeight="125"
                     Width="Auto"
                     Height="Auto"
-                    Margin="40">
+                    Margin="30"
+                    CornerRadius="11">
 
                 <Border.Background>
                     <LinearGradientBrush StartPoint="0, 0" EndPoint="1,2">
@@ -47,29 +40,29 @@
                     </LinearGradientBrush>
                 </Border.Background>
 
-                <Border.Clip>
-                    <RectangleGeometry RadiusX="10"
-                                       RadiusY="10"
-                                       Rect="0,0,380,200"/>
-                </Border.Clip>
+                
 
                 <Grid>
                     <StackPanel>
                         <TextBlock Text="Wir sichern Ihre Passwörter!"
                                    Foreground="White"
                                    FontSize="22"
-                                   Margin="-10, 30"
-                                   Padding="50" FontFamily="Segoe UI Variable Text Semibold"/>
+                                   TextAlignment="Center"
+                                   HorizontalAlignment="Center"
+                                   VerticalAlignment="Center"
+                                   Margin="10, 30"
+                                   Padding="40" FontFamily="Segoe UI Variable Text Semibold"/>
                     </StackPanel>
                 </Grid>
             </Border>
             <Border 
-                    MinHeight="200"
-                    MinWidth="380"
+                    MinHeight="125"
+                    MinWidth="300"
+
                     Width="Auto"
                     Height="Auto"
-                    CornerRadius="10"
-                    Margin="40"
+                    CornerRadius="11"
+                    Margin="30"
                     VerticalAlignment="Stretch"
                     HorizontalAlignment="Stretch">
 
@@ -83,15 +76,19 @@
                 <StackPanel>
                     <TextBlock Text="Vertrauen Sie in Project P!"
                                Foreground="White"
-                               FontSize="22"
-                               Margin="10,30"
-                               Padding="50"
+                               TextAlignment="Center"
+                               Margin="30"
+                               HorizontalAlignment="Center"
+                               FontSize="22"                               
+                               Padding="40"
                                FontFamily="Segoe UI Variable Text Semibold"/>
                 </StackPanel>
             </Border>
         </StackPanel>
 
-        <StackPanel>
+        <StackPanel  VerticalAlignment="Center"
+                    HorizontalAlignment="Center"
+                    Width="Auto">
             <StackPanel.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="Margin" Value="25, 40, 0, 0"/>
@@ -105,8 +102,10 @@
                        Margin="5,25,0,5"/>
 
             <StackPanel Orientation="Horizontal">
-                <Border Width="150"
+                <Border Width="Auto"
                         Height="120"
+                        MinWidth="150"
+                        MaxWidth="175"
                         CornerRadius="12">
 
                     <Border.Background>
@@ -118,15 +117,19 @@
 
                     <StackPanel>
                         <TextBlock Text="SHA-256 verschlüsselt"
+                                   TextAlignment="Center"
+                                   TextWrapping="Wrap"
                                    Foreground="White"
                                    FontSize="18"
-                                   Padding="50"
-                                   FontFamily="Segoe UI Variable Text Semibold" RenderTransformOrigin="0.536,0.466" Height="124" Width="160" TextAlignment="Center" TextWrapping="WrapWithOverflow" IsEnabled="False" Margin="-43,-15,0,0"/>
+                                   Margin="35"
+                                   FontFamily="Segoe UI Variable Text Semibold" RenderTransformOrigin="0.536,0.466"/>
                     </StackPanel>
                 </Border>
 
-                <Border Width="150"
+                <Border Width="Auto"
                         Height="120"
+                        MinWidth="150"
+                        MaxWidth="175"
                         CornerRadius="12">
 
                     <Border.Background>
@@ -137,16 +140,19 @@
                     </Border.Background>
                     <StackPanel>
                         <TextBlock Text="Feld 2"
+                                   TextAlignment="Center"
+                                   TextWrapping="Wrap"
                                    Foreground="White"
                                    FontSize="18"
-                                   Margin="0,-3,0,0"
-                                   Padding="50"
+                                   Margin="50"
                                    FontFamily="Segoe UI Variable Text Semibold" RenderTransformOrigin="0.536,0.466"/>
                     </StackPanel>
 
                 </Border>
-                <Border Width="150"
+                <Border Width="Auto"
                         Height="120"
+                        MinWidth="150"
+                        MaxWidth="175"
                         CornerRadius="12">
                     <Border.Background>
                         <LinearGradientBrush StartPoint="0, 0" EndPoint="1,2">
@@ -158,14 +164,16 @@
                         <TextBlock Text="Feld 3"
                                    Foreground="White"
                                    FontSize="18"
-                                   Margin="0,-3,0,0"
-                                   Padding="50"
+                                   TextAlignment="Center"
+                                   Margin="50"
                                    FontFamily="Segoe UI Variable Text Semibold" RenderTransformOrigin="0.536,0.466"/>
                     </StackPanel>
 
                 </Border>
-                <Border Width="150"
+                <Border Width="Auto"
                         Height="120"
+                        MinWidth="150"
+                        MaxWidth="175"
                         CornerRadius="12">
                     <Border.Background>
                         <LinearGradientBrush StartPoint="0, 0" EndPoint="1,2">
@@ -177,14 +185,16 @@
                         <TextBlock Text="Feld 4"
                                    Foreground="White"
                                    FontSize="18"
-                                   Margin="0,-3,0,0"
-                                   Padding="50"
+                                   TextAlignment="Center"
+                                   Margin="50"
                                    FontFamily="Segoe UI Variable Text Semibold" RenderTransformOrigin="0.536,0.466"/>
                     </StackPanel>
 
                 </Border>
-                <Border Width="150"
+                <Border Width="Auto"
                         Height="120"
+                        MinWidth="150"
+                        MaxWidth="175"
                         CornerRadius="12">
 
                     <Border.Background>
@@ -197,8 +207,8 @@
                         <TextBlock Text="Feld 5"
                                    Foreground="White"
                                    FontSize="18"
-                                   Margin="0,-3,0,0"
-                                   Padding="50"
+                                   TextAlignment="Center"
+                                   Margin="50"
                                    FontFamily="Segoe UI Variable Text Semibold" RenderTransformOrigin="0.536,0.466"/>
                     </StackPanel>
                 </Border>
