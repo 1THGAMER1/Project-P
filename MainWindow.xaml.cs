@@ -31,6 +31,15 @@ namespace Project_P
         [DllImport("user32.dll")]
         public static extern IntPtr SendMessage(IntPtr hWnd, int wMsg, int wParam, int lParam);
 
+        private void CheckScreen()
+        {
+            WindowInteropHelper helper = new WindowInteropHelper(this);
+
+            IntPtr hWnd = helper.Handle;
+            var Screen = System.Windows.Forms.Screen.FromHandle(hWnd);
+            MaxHeight = Screen.WorkingArea.Height + 10;
+        }
+
         private void ControlBar_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             WindowInteropHelper helper = new WindowInteropHelper(this);
@@ -38,7 +47,7 @@ namespace Project_P
 
             IntPtr hWnd = helper.Handle;
             var Screen = System.Windows.Forms.Screen.FromHandle(hWnd);
-            MaxHeight = Screen.WorkingArea.Height+10;
+            MaxHeight = Screen.WorkingArea.Height + 10;
         }
 
         private void ExitButton_Click(object sender, RoutedEventArgs e)
@@ -48,16 +57,17 @@ namespace Project_P
 
         private void MaximizeButton_Click(object sender, RoutedEventArgs e)
         {
-            if (this.WindowState == WindowState.Normal)
+            CheckScreen();
+            if (WindowState == WindowState.Normal)
             {
-                this.WindowState = WindowState.Maximized;
+                WindowState = WindowState.Maximized;
             }
-            else this.WindowState = WindowState.Normal;
+            else WindowState = WindowState.Normal;
         }
 
         private void MinimizeButton_Click(Object sender, RoutedEventArgs e)
         {
-            this.WindowState = WindowState.Minimized;
+            WindowState = WindowState.Minimized;
         }
     }
 }
